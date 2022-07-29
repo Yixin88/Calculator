@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet", href="style.css">
+</head>
+<body>
+    
+    <div class="overall">
+        <main class="container">
+            <div class="display">
+                <div class="previous">0</div>
+                <div class="current"></div>
+            </div>
+            <div class="pad">
+                <div class="topTop">
+                    <button class="clear" id="clear" value="clear" data-key="8">Clear</button>
+                    <button class="delete" id="delete" value="delete" data-key="8">DEL</button>
+                </div>
+                <div class="top">
+                    <button class="operand" id="7" value="7" data-key="55">7</button>
+                    <button class="operand" id="8" value="8" data-key="56">8</button>
+                    <button class="operand" id="9" value="9" data-key="57">9</button>
+                    <button class="operator" id="divideBtn" value="divide" data-value='÷'data-key="68">÷</button>
+                </div>
+                <div class="middle">
+                    <button class="operand" id="4" value="4" data-key="52">4</button>
+                    <button class="operand" id="5" value="5" data-key="53">5</button>
+                    <button class="operand" id="6" value="6" data-key="54">6</button>
+                    <button class="operator" id="multiplyBtn" value="multiply" data-key="88">*</button>
+                </div>
+                <div class="bottom">
+                    <button class="operand" id="1" value="1" data-key="49">1</button>
+                    <button class="operand" id="2" value="2" data-key="50">2</button>
+                    <button class="operand" id="3" value="3" data-key="51">3</button>
+                    <button class="operator" id="subtractBtn" value="subtract" data-key="173">-</button>
+                </div>
+                <div class="bottomBottom">
+                    <button class="operand" id="0" value="0" data-key="48">0</button>
+                    <button class="operand" id="dot" value="." data-key="190">.</button>
+                    <button class="equal" id="equal" value="=" data-key="69">=</button>
+                    <button class="operator" id="addBtn" value="add" data-key="61">+</button>
+                </div>
+            </div>
+        </main> 
+    </div>  
+    <script src="script.js" defer></script>
+</body>
+</html>
