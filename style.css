@@ -1,10 +1,10 @@
 .display {
     border: 2px solid black;
-    min-width: 210px;
+    min-width: 225px;
     min-height: 80px;
     text-align: end;
     border-radius: 5px;
-    background-color: white;
+    background-color: grey;
     display: flex;
     flex-direction: column;
 }
@@ -36,7 +36,7 @@ button {
 }
 
 #clear, #delete{
-    min-width: 104px;
+    min-width: 110px;
     font-weight: bold;
 }
 
@@ -54,6 +54,7 @@ html {
     align-items: center;
     width: 100%;
     padding: 250px 0px;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .operator {
@@ -77,5 +78,12 @@ html {
 }
 
 .current, .previous {
-    margin: 0px 10px
+    margin: 0px 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.topTop {
+    display: flex;
+    justify-content: space-between;
 }
