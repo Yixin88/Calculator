@@ -14,6 +14,7 @@ const deleteButton = document.querySelector('.delete')
 let currentNumber = '';
 let previousOperand = '';
 let operator;
+let storeOp = [];
 
 function displayText() {
     numButton.forEach(btn => {
@@ -36,6 +37,7 @@ function displayText() {
                 return;
             }
             operator = btn.textContent
+            storeOp.push(operator)
             operate()
             updateDisplay()
         })
@@ -74,10 +76,11 @@ function operate() {
     if(currentNumber ==='') {
         return
     } if (previousOperand !== '') {
+        operator = storeOp[storeOp.length -2];
         calculateResults()
     }
 
-    previousOperand = `${currentNumber} ${operator}`
+    previousOperand = `${currentNumber} ${storeOp[storeOp.length -1]}`
     currentNumber = ''
 }
 
@@ -97,15 +100,20 @@ function calculateResults() {
 
     : '';
 
+    previousOperand = `${currentNumber} ${storeOp[storeOp.length - 2]}`
     currentNumber = results;
-    operator = null;
     previousOperand = ''
     
 }
 
 equalButton.addEventListener('click', () => {
+    operator = storeOp[storeOp.length - 1]
     calculateResults()
+    previousOperand =''
     updateDisplay()
+    operator = storeOp[storeOp.length -1];
+    
+    
 })
 
 displayText()

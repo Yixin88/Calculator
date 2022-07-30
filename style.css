@@ -2,9 +2,11 @@
     border: 2px solid black;
     min-width: 225px;
     min-height: 80px;
+    max-width: 225px;
+    overflow: auto;
     text-align: end;
     border-radius: 5px;
-    background-color: grey;
+    background-color: rgb(179, 175, 175);
     display: flex;
     flex-direction: column;
 }
@@ -19,12 +21,13 @@
     border: 5px solid black;
     border-radius: 10px;
     padding: 20px;
+    box-shadow: rgb(0, 0, 0) 0px 0 500px;
 }
 
 .pad {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
 }
 
 button {
@@ -32,7 +35,8 @@ button {
     min-height: 50px;
     border-radius: 5px;
     font-size: large;
-    
+    box-shadow: rgba(0,0,0,0.8) 0px 0 3px;
+    font-family: 'Roboto', monospace;
 }
 
 #clear, #delete{
@@ -40,8 +44,16 @@ button {
     font-weight: bold;
 }
 
-#clear:active {
-    background-color: aqua;
+#clear {
+    background-color: pink;
+}
+
+#delete {
+    background-color: plum;
+}
+
+#clear:active, #delete:active{
+    background-color: rgb(167, 167, 162);
 }
 
 html {
@@ -50,11 +62,13 @@ html {
 
 .overall {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 250px 0px;
+    padding: 180px 0px;
     font-family: "Lucida Console", "Courier New", monospace;
+    gap: 150px;
 }
 
 .operator {
@@ -87,3 +101,4 @@ html {
     display: flex;
     justify-content: space-between;
 }
+
